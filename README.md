@@ -34,18 +34,13 @@ terraform plan
 
 # Apply the configuration
 terraform apply
+
 🔐 Accessing the Bastion Host
-bash
-Copy
 ssh -i your-key.pem ubuntu@<Bastion_Public_IP>
 From the Bastion Host, you can SSH into private EC2 instances:
-
-bash
-Copy
 ssh -i your-key.pem ubuntu@<Private_EC2_IP>
+
 📂 Project Structure
-bash
-Copy
 terraform-aws-alb-ec2-docker/
 ├── main.tf                # Main Terraform configuration
 ├── variables.tf           # Input variables
@@ -56,11 +51,10 @@ terraform-aws-alb-ec2-docker/
 │   ├── bastion/           # Bastion host module
 │   └── security_group/    # Security group module
 └── README.md
+
 🧹 Cleanup
 To destroy all resources:
-
-bash
-Copy
 terraform destroy
+
 📜 License
 This project is licensed under the MIT License.
